@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import NavBar from './ui/NavBar'
-import Home from './container/Home';
 
-function App() {
+function App({ children }) {
+  const logo = 'DevDeck101';
+
   return (
     <div className="container">
-      <NavBar />
-      <Home />
+      <NavBar logo={logo} />
+      {children}
     </div>
   );
 }

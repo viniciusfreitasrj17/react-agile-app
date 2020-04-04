@@ -1,22 +1,23 @@
 import React from 'react';
 import HomeCrad from '../ui/HomeCard';
+import { hashHistory } from 'react-router';
 
 const Home = () => {
 
   const homeCardReleases = {
     title: 'Releases',
     text: 'Manage Releases',
-    action: () => alert('Releases Clicked')
+    action: () => hashHistory.push('/releases')
   }
   const homeCardBacklog = {
     title: 'Backlog',
     text: 'Manage Backlog',
-    action: () => alert('Backlog Clicked')
+    action: () => hashHistory.push('/backlog')
   }
   const homeCardSprints = {
     title: 'Sprints',
     text: 'Manage Sprints',
-    action: () => alert('Sprints Clicked')
+    action: () => hashHistory.push('/sprints')
   }
 
   return (
