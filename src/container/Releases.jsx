@@ -37,8 +37,8 @@ const Releases = () => {
     e.preventDefault();
 
     let myRelease = releases;
-    delete myRelease[index];
-    setReleases( releases = myRelease );
+    delete myRelease.splice(index, 1)
+    setReleases( myRelease );
     console.log({
       releases,
       myRelease
@@ -67,7 +67,7 @@ const Releases = () => {
             <th scope="row"> {data.id} </th>
             <td> {data.releaseName} </td>
             <td> {data.releaseDate} </td>
-            <td> <button type="button" className="btn btn-danger btn-sm" onClick={clickDelete} >Danger</button> </td>
+            <td> <button type="button" className="btn btn-danger btn-sm" onClick={clickDelete} >Remover</button> </td>
           </tr>
         )
     })}
